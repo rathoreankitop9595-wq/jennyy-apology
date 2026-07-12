@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thank You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+background:linear-gradient(180deg,#ffd6e7,#ffeef7,#ffffff);
+
+}
+
+.container{
+
+width:92%;
+
+max-width:430px;
+
+height:90vh;
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(18px);
+
+border-radius:30px;
+
+padding:25px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+animation:fade .8s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+h1{
+
+text-align:center;
+
+color:#ff4f93;
+
+font-size:32px;
+
+margin-top:10px;
+
+}
+
+.cat{
+
+display:block;
+
+margin:auto;
+
+width:180px;
+
+border-radius:20px;
+
+}
+
+.text{
+
+line-height:1.9;
+
+font-size:16px;
+
+color:#555;
+
+text-align:center;
+
+margin-top:15px;
+
+}
+
+.buttons{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+button{
+
+padding:15px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff4f93;
+
+color:white;
+
+font-size:17px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.04);
+
+background:#ff2d7b;
+
+}
+
+#finalMessage{
+
+margin-top:15px;
+
+text-align:center;
+
+font-size:17px;
+
+font-weight:600;
+
+color:#ff4f93;
+
+display:none;
+
+}
+
+.heart{
+
+position:fixed;
+
+bottom:-40px;
+
+font-size:22px;
+
+pointer-events:none;
+
+animation:float 6s linear forwards;
+
+}
+
+@keyframes float{
+
+from{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+to{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div>
+
+<h1>❤️ Thank You ❤️</h1>
+
+<img class="cat"
+
+src="https://media.tenor.com/JjW5YB9TzR4AAAAi/cute-cat.gif">
+
+<p class="text">
+
+Jennyy,
+
+<br><br>
+
+Thank you for taking the time to go through this little website.
+
+I know a website can't undo how you felt, and I don't expect it to.
+
+I just wanted you to know how I truly feel and to say I'm sorry in a way that came from my heart.
+
+No matter what happens after this, I'm genuinely grateful that you gave this a few minutes of your time.
+
+Thank you.
+
+❤️
+
+</p>
+
+</div>
+
+<div>
+
+<div class="buttons">
+
+<button onclick="showEnding()">
+
+❤️ Thank You For Reading
+
+</button>
+
+<button onclick="location.href='index.html'">
+
+🔄 Start Again
+
+</button>
+
+</div>
+
+<div id="finalMessage">
+
+Thank you for reading everything. I truly hope life gives you many reasons to smile. 🌸❤️
+
+</div>
+
+</div>
+
+</div>
+<script>
+
+function showEnding(){
+
+document.getElementById("finalMessage").style.display="block";
+
+for(let i=0;i<80;i++){
+
+createHeart();
+
+}
+
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=Math.random()>0.5?"💖":"❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+heart.style.fontSize=(18+Math.random()*18)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},8000);
+
+}
+
+</script>
+
+</body>
+</html>

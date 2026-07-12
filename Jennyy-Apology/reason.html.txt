@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Things I Never Said Enough ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#ffe0ef,#f7ebff,#e6f7ff);
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+.container{
+
+width:92%;
+
+max-width:420px;
+
+height:90vh;
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(18px);
+
+border-radius:28px;
+
+padding:25px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+h1{
+
+text-align:center;
+
+color:#ff4f93;
+
+margin-bottom:20px;
+
+}
+
+.slider{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:24px;
+
+padding:28px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+animation:fade .5s;
+
+min-height:250px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:19px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.controls{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:20px;
+
+}
+
+button{
+
+padding:14px 25px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff4f93;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+.bottom{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:20px;
+
+}
+
+#count{
+
+text-align:center;
+
+color:#888;
+
+margin-top:12px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div>
+
+<h1>🌸 Things I Never Said Enough</h1>
+
+<div class="slider">
+
+<div class="card" id="card">
+
+You make ordinary days feel special.
+
+</div>
+
+</div>
+
+<div id="count">
+
+1 / 8
+
+</div>
+
+</div>
+
+<div class="controls">
+
+<button onclick="previousCard()">
+
+⬅ Previous
+
+</button>
+
+<button onclick="nextCard()">
+
+Next ➜
+
+</button>
+
+</div>
+
+<div class="bottom">
+
+<button onclick="location.href='letter.html'">
+
+Back
+
+</button>
+
+<button onclick="location.href='cats.html'">
+
+Continue ❤️
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+const messages=[
+
+"✨ You make ordinary days feel special.",
+
+"❤️ And aapke sath gediii toh bass... one of the thing I wait for every day.",
+
+"🌸 Talking to you slowly became one of my favourite parts of every day.",
+
+"🐱 Even the cutest cats would agree that you're adorable.",
+
+"💖 I never wanted you to think you didn't matter to me.",
+
+"🌷 Your smile always made my day a little brighter.",
+
+"🥹 Thank you for being yourself. That's already more than enough.",
+
+"❤️ I hope one day, this page makes you smile instead of overthink."
+
+];
+
+let current=0;
+
+const card=document.getElementById("card");
+
+const count=document.getElementById("count");
+
+function update(){
+
+card.style.opacity=0;
+
+setTimeout(()=>{
+
+card.innerHTML=messages[current];
+
+count.innerHTML=(current+1)+" / "+messages.length;
+
+card.style.opacity=1;
+
+},180);
+
+}
+
+function nextCard(){
+
+if(current<messages.length-1){
+
+current++;
+
+update();
+
+}
+
+}
+
+function previousCard(){
+
+if(current>0){
+
+current--;
+
+update();
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

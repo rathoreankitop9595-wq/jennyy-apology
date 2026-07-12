@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Letter For You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffe3ef,#f8ecff,#e5f6ff);
+overflow:hidden;
+position:relative;
+}
+
+.container{
+width:92%;
+max-width:430px;
+height:90vh;
+background:rgba(255,255,255,.72);
+backdrop-filter:blur(18px);
+border-radius:30px;
+padding:25px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+animation:fade .8s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+text-align:center;
+color:#ff4f93;
+margin-bottom:15px;
+}
+
+.message{
+overflow-y:auto;
+padding-right:8px;
+}
+
+.message p{
+line-height:1.9;
+font-size:16px;
+color:#555;
+margin-bottom:18px;
+}
+
+.cat{
+display:block;
+margin:auto;
+width:160px;
+border-radius:20px;
+}
+
+.buttons{
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+}
+
+button{
+padding:14px 24px;
+border:none;
+border-radius:40px;
+font-size:16px;
+cursor:pointer;
+color:white;
+background:#ff4f93;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#ff2b7a;
+}
+
+.heart{
+position:absolute;
+bottom:-40px;
+font-size:22px;
+animation:float linear infinite;
+}
+
+@keyframes float{
+from{
+transform:translateY(0);
+opacity:1;
+}
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="message">
+
+<h1>💌 A Letter For You</h1>
+
+<img class="cat"
+src="https://media.tenor.com/F4K6xq2Y0_QAAAAi/cat.gif">
+
+<p>
+
+Dear Jennyy,
+
+</p>
+
+<p>
+
+Thank you for giving this little website a chance.
+
+I don't know how you're feeling while reading this, but I truly hope you'll read it until the end.
+
+</p>
+
+<p>
+
+I know those chats hurt you.
+
+And I completely understand why.
+
+Reading something like that could make anyone feel like they don't matter.
+
+</p>
+
+<p>
+
+The thing that hurts me the most is knowing that my words made you feel that way.
+
+Because the truth is...
+
+You do matter to me.
+
+More than I have probably ever said.
+
+</p>
+
+<p>
+
+Maybe I wasn't good at expressing it.
+
+Maybe I made mistakes.
+
+Maybe I made you overthink.
+
+And for all of that...
+
+I'm genuinely sorry.
+
+</p>
+
+<p>
+
+I'm not asking you to forget everything today.
+
+I'm not asking you to pretend nothing happened.
+
+I only hope that, with time, I can show you through my actions what my words failed to express.
+
+</p>
+
+<p>
+
+Because honestly...
+
+Seeing you smile has always made my day a little better.
+
+And spending time with you is something I genuinely look forward to.
+
+</p>
+
+<p>
+
+No matter what happens after this...
+
+Thank you for being someone so special in my life.
+
+❤️
+
+</p>
+
+</div>
+
+<div class="buttons">
+
+<button onclick="location.href='index.html'">
+⬅ Back
+</button>
+
+<button onclick="location.href='reasons.html'">
+Next ➜
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<35;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="💖";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=(5+Math.random()*5)+"s";
+
+h.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(h);
+
+}
+
+</script>
+
+</body>
+</html>
